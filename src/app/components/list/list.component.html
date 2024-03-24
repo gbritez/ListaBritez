@@ -1,0 +1,9 @@
+<div class="container">
+    <ul *ngIf="mostrarLista">
+        <li *ngFor="let item of items" [ngStyle]="{'font-size': '24px', 'color': item.esRegular ? 'green' : 'red' }">
+            {{item.nombre| titlecase}}
+        </li>
+    </ul>
+    <button (click)="mostrarLista = !mostrarLista">{{!mostrarLista ? 'Mostrar Lista' : 'Ocultar
+        Lista'}}</button>
+</div>
